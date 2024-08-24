@@ -15,15 +15,12 @@
             private $price;
 
             // メソッドを定義する
-            public function set_price(string $price){
-                $this->price =$price;
-            }
             public function show_price(){
                 echo $this->price.'<br>';
             }
 
             // コンストラクタを定義する
-            public function __construct(string $name, string $price){
+            public function __construct($name, $price){
                 $this->name = $name;
                 $this->price = $price;
             }
@@ -35,43 +32,33 @@
             private $height;
             private $weight;
 
-            // メソッドを定義する
-            public function set_height(string $height){
-                $this->height =$height;
-            }
             public function show_height(){
                 echo $this->height.'<br>';
             }
 
             // コンストラクタを定義する
-            public function __construct(string $name, int $height, string $weight){
+            public function __construct($name, $height, $weight){
                 $this->name = $name;
                 $this->height = $height;
                 $this->weight = $weight;
             }
         }
-
             // インスタンス化する
-            $food = new Food('potato', 250);
-
+            $food = new Food('potate', 250);
             // インスタンス$userの各プロパティの値を出力する
             print_r($food);
             echo '<br>';
 
             // インスタンス化する
             $animal = new Animal('dog', 60, 5000);
-
             // インスタンス$userの各プロパティの値を出力する
             print_r($animal);
             echo '<br>';
 
-            // メソッドにアクセスして実行する
-            $food->set_price('250');
-            $food->show_price();
 
-            // メソッドにアクセスして実行する
-            $animal->set_height('60');
+            $food->show_price();
             $animal->show_height();
+
         ?>
     </p>
     
